@@ -1,0 +1,52 @@
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #1dc6df ;
+    }
+}
+
+.typing-text {
+    color: #1dc6df;
+    line-height: 1.5rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 2px solid #1dc6df ;
+    animation: typing 5s steps(20) infinite, blink-caret 1.2s step-end infinite;
+}
+
+.parallax {
+    /*background-image: url('../src/assets/parallax1.jpg');*/
+    background-color: #1dc6df;
+    height: 300px; /* Adjust as needed */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+}
